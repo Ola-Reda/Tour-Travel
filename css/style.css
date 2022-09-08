@@ -34,7 +34,6 @@ body {
 /*start header*/
 header nav{
     background-color: #333;
-
 }
 .navbar a.navbar-brand::first-letter{
     color: var(--main-color);
@@ -82,17 +81,9 @@ header nav{
 }
 /*end header*/
 /*strat carousel*/
-.carousel .carousel-item{
-    height: calc(100vh - 72px);
-}
-@media (max-width:576px) {
-    .carousel .carousel-item img{
-        height: auto;
-    }
-}
-@media (min-width:577px) {
-    .carousel .carousel-item img{
-        height: 100%;
+@media (min-width:767px) {
+    .carousel .carousel-item{
+        height: calc(100vh - 72px);
     }
 }
 .carousel .carousel-caption{
