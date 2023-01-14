@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="tranining template">
+        <meta name="description" content="Travel website help you to know about trips and book a ticket">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Travel</title>
+        <!--website icon-->
         <link rel="icon" href="images/image-icon.png">
+        <!--bootstrap-->
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!--font awesome-->
         <link rel="stylesheet" href="css/all.min.css">
+        <!--swiper-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <!--css file-->
         <link rel="stylesheet" href="css/style.css">
+        <!--google fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
-
     <body>
         <!--start headeder-->
         <header>
@@ -52,13 +56,48 @@
                             </li>
                         </ul>
                         <div class="icons">
-                            <i class="fa-solid fa-user pe-3"></i>
-                            <i class="fa-solid fa-magnifying-glass pe-3"></i>
+                            <i class="fa-solid fa-user pe-3" data-bs-toggle="modal" data-bs-target="#myModal"></i>
+                            <i onclick="appear()" class="fa-solid fa-magnifying-glass pe-3" id="search"></i>
                         </div>
                     </div>
                 </div>
             </nav>
             <!--end navbar-->
+            <!--start form search-->
+            <div class="search-box p-3">
+              <form class="d-flex align-items-center gap-3">
+                <input type="text" class="rounded p-2" name="search" placeholder="Search here...">
+                <i class="fa-solid fa-magnifying-glass fs-4"></i>
+              </form>
+            </div>
+            <!--end form search-->
+            <!--start login-->
+            <div class="modal fade" id="myModal">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content p-3 border-0">
+                  <h3 class="text-center mt-2 mb-0">LOGIN</h3>
+                  <form action="" autocomplete="off">
+                    <div class="mb-3 mt-3">
+                        <input type="email" class="form-control" placeholder="Enter your email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" placeholder="Enter your password" name="Password" required>
+                    </div>
+                    <div class="mb-3">
+                      <input type="submit" value="Login Now" class="form-control">
+                    </div>
+                    <div class="form-check mb-3">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember"> Remember Me
+                        </label>
+                    </div>
+                    <p class="mb-2">Forget Password? <a href="#" class="text-decoration-none">Click Here</a> </p>
+                    <p class="mb-1">Don't Have And Account? <a href="#" class="text-decoration-none">Register Now</a> </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!--end login-->
         </header>
         <!--end header-->
         <!--start Carousel-->
@@ -83,9 +122,9 @@
               <img src="images/slide4.jpg" class="d-block w-100 h-100" alt="image">
             </div>
           </div>
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption d-none d-sm-block">
             <h1 class="text-uppercase fw-bold">adventure is worthwhile</h1>
-            <p class="text-capitalize fs-5">dicover new places with us, adventure awaits</p>
+            <p class="text-capitalize">dicover new places with us, adventure awaits</p>
             <a href="#" class="btn main-btn">Dicover More</a>
           </div>
         </div>
@@ -110,11 +149,11 @@
               </div>
               <div class="col-md-6">
                 <div class="box">
-                  <form action="" class="p-3 rounded-3">
+                  <form action="" class="p-3 rounded-3" autocomplete="off">
                     <label for="place">Where To:</label>
-                    <input class="input w-100 d-block my-2" id="place" type="text" placeholder="search places">
+                    <input class="input w-100 d-block my-2" id="place" type="text" placeholder="search places" required>
                     <label for="guests">How Many:</label>
-                    <input class="input w-100 d-block my-2" id="guests" type="number" placeholder="number of guests">
+                    <input class="input w-100 d-block my-2" id="guests" type="number" placeholder="number of guests" required>
                     <label for="arrivel-data">Arrivels:</label>
                     <input class="input w-100 d-block my-2" id="arrivel-data" type="date">
                     <label for="leaving-data">Leaving:</label>
@@ -517,13 +556,13 @@
               </div>
               <div class="col-md-6">
                 <div class="box">
-                  <form action="" class="rounded-3 p-3">
-                    <input type="text" placeholder="name">
-                    <input type="email" placeholder="email">
-                    <input type="number" placeholder="numer">
-                    <input type="text" placeholder="subject">
-                    <textarea placeholder="message"></textarea>
-                    <a href="#" class="btn main-btn fw-semibold mt-1">Send Message</a>
+                  <form action="" class="rounded-3 p-3" autocomplete="off">
+                    <input type="text" placeholder="name" name="nme" required>
+                    <input type="email" placeholder="email" name="email" required>
+                    <input type="number" placeholder="numer" name="number">
+                    <input type="text" placeholder="subject" name="subject">
+                    <textarea placeholder="message" name="massage"></textarea>
+                    <button class="btn main-btn fw-semibold mt-1">Send Message</button>
                   </form>
                 </div>
               </div>
@@ -640,5 +679,4 @@
         <script src="js/all.min.js"></script>
         <script src="js/main.js"></script>
     </body>
-
 </html>

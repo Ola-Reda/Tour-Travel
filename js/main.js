@@ -1,3 +1,10 @@
+let btnSearch = document.querySelector("#search");
+let boxSearch = document.querySelector('.search-box');
+let appear = () => {
+    boxSearch.classList.toggle("box-appear");
+}
+
+
 var swiper = new Swiper('.review .swiper', {
     spaceBetween: 30,
     loop: true,
