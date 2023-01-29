@@ -145,7 +145,11 @@ header nav {
 /*end header*/
 /*strat carousel*/
 .carousel {
-    z-index: -11;
+    height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 .carousel .carousel-indicators [data-bs-target] {
     width: 15px;
@@ -156,36 +160,63 @@ header nav {
 .carousel-indicators .active {
     background-color: var(--main-color);
 }
-@media (min-width:767px) {
-    .carousel .carousel-item{
-        height: calc(100vh - 72px);
-    }
+.carousel .carousel-inner {
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
 }
-.carousel .carousel-caption {
-    transform: translatey(-80%);
+.carousel .carousel-item {
+    height: calc(100vh - 72px);
+    background-position: center;
+    background-size: cover;
 }
-@media (max-width:768px) {
-    .carousel .carousel-caption {
-        transform: translatey(-50%);
-    }
+.carousel .carousel-item:first-child {
+    background-image: url(../images/slide1.jpg);
 }
-.carousel .carousel-caption p {
-    font-size: 20px;
+.carousel .carousel-item:nth-child(2) {
+    background-image: url(../images/slide2.jpg);
 }
-@media (max-width:767px) {
-    .carousel .carousel-caption h1 {
-        font-size: 24px;
-    }
-    .carousel .carousel-caption p {
-        font-size: 14px;
-    }
+.carousel .carousel-item:nth-child(3) {
+    background-image: url(../images/slide3.jpg);
 }
-.carousel a {
+.carousel .carousel-item:last-child {
+    background-image: url(../images/slide4.jpg);
+}
+.carousel .content {
+    color: white;
+    position: relative;
+    z-index: 111;
+}
+.carousel .content a {
     transition: all .8s;
     padding: 7px 34px;
     border-radius: 4px;
 }
 /*end carousel*/
+/* main {
+    height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+}
+main .content {
+    position: relative;
+    z-index: 111;
+    color: white;
+}
+main .content a {
+    transition: all .8s;
+    padding: 7px 34px;
+    border-radius: 4px;
+}
+main img {
+    position: absolute;
+    top:0;
+    left: 0;
+    object-fit: cover;
+} */
 /*start section book*/
 .book form {
     box-shadow: 0 1rem 2rem rgba(0,0,0,24%);

@@ -3,6 +3,9 @@ let boxSearch = document.querySelector('.search-box');
 let appear = () => {
     boxSearch.classList.toggle("box-appear");
 }
+window.onscroll = () => {
+    boxSearch.classList.remove("box-appear");
+}
 
 
 var swiper = new Swiper('.review .swiper', {

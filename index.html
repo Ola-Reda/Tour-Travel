@@ -55,9 +55,10 @@
                                 <a class="nav-link p-lg-3" href="#contact">Contact</a>
                             </li>
                         </ul>
-                        <div class="icons">
-                            <i class="fa-solid fa-user pe-3" data-bs-toggle="modal" data-bs-target="#myModal"></i>
-                            <i onclick="appear()" class="fa-solid fa-magnifying-glass pe-3" id="search"></i>
+                        <div class="icons d-flex align-items-center gap-3">
+                            <i class="fa-solid fa-user" data-bs-toggle="modal" data-bs-target="#myModal"></i>
+                            <i onclick="appear()" class="fa-solid fa-magnifying-glass" id="search"></i>
+                            <!-- <i class="fa-solid fa-xmark fs-3" id="close"></i> -->
                         </div>
                     </div>
                 </div>
@@ -66,7 +67,7 @@
             <!--start form search-->
             <div class="search-box p-3">
               <form class="d-flex align-items-center gap-3">
-                <input type="text" class="rounded p-2" name="search" placeholder="Search here...">
+                <input type="search" class="rounded p-2" name="search" placeholder="Search here...">
                 <i class="fa-solid fa-magnifying-glass fs-4"></i>
               </form>
             </div>
@@ -110,19 +111,15 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="images/slide1.jpg" class="d-block w-100 h-100" alt="image">
             </div>
             <div class="carousel-item">
-              <img src="images/slide2.jpg" class="d-block w-100 h-100" alt="image">
             </div>
             <div class="carousel-item">
-              <img src="images/slide3.jpg" class="d-block w-100 h-100" alt="image">
             </div>
             <div class="carousel-item">
-              <img src="images/slide4.jpg" class="d-block w-100 h-100" alt="image">
             </div>
           </div>
-          <div class="carousel-caption d-none d-sm-block">
+          <div class="content text-center">
             <h1 class="text-uppercase fw-bold">adventure is worthwhile</h1>
             <p class="text-capitalize">dicover new places with us, adventure awaits</p>
             <a href="#" class="btn main-btn">Dicover More</a>
