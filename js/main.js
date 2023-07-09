@@ -30,7 +30,7 @@ var swiper = new Swiper('.review .swiper', {
 
 var swiper = new Swiper(".brand .swiper", {
     spaceBetween: 20,
-    loop:true,
+    loop: true,
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
